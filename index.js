@@ -1,0 +1,19 @@
+require('dotenv').config()
+const express = require('express')
+const app = express()
+
+const routes = require('./routes/index')
+
+app.use(express.json())
+app.use(express.urlencoded({ extended: true }))
+
+app.use('/livres', routes.livres)
+app.use('/revues', routes.revues)
+
+app.listen(process.env.PORT, (err) => {
+  if (err) {
+    console.log('Something wrong happened')
+  } else {
+    console.log(`server is listening on port ${process.env.PORT}`)
+  }
+})
