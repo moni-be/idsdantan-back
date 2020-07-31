@@ -8,6 +8,8 @@ const routes = require('./routes/index')
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
+app.use(cors('*'))
+
 app.use('/livres', routes.livres)
 app.use('/revues', routes.revues)
 
