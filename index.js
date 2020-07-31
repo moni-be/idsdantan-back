@@ -12,6 +12,8 @@ app.use(cors('*'))
 
 app.use('/livres', routes.livres)
 app.use('/revues', routes.revues)
+app.use('/mon-livre', routes.monLivre)
+app.use('/ma-revue', routes.maRevue)
 
 app.listen(process.env.PORT, (err) => {
   if (err) {
