@@ -4,7 +4,7 @@ const connection = require('../conf')
 const router = express.Router()
 
 router.get('/', (req, res) => {
-  connection.query('SELECT * from books', (err, results) => {
+  connection.query('SELECT id, category_id,title, author,price, description, image_name FROM books', (err, results) => {
     if (err) {
       res.status(500).send('Erreur losr de la connection')
     } else {
