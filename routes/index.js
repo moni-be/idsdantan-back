@@ -1,11 +1,11 @@
-const livres = require('./livres')
-const revues = require('./revues')
+const livre = require('./livre')
+const revue = require('./revue')
 const monLivre = require('./mon-livre')
 const maRevue = require('./ma-revue')
 
 module.exports = {
-  livres,
-  revues,
+  livre,
+  revue,
   monLivre,
   maRevue
 }

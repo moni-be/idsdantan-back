@@ -10,8 +10,8 @@ app.use(express.urlencoded({ extended: true }))
 
 app.use(cors('*'))
 
-app.use('/livres', routes.livres)
-app.use('/revues', routes.revues)
+app.use('/livre', routes.livre)
+app.use('/revue', routes.revue)
 app.use('/mon-livre', routes.monLivre)
 app.use('/ma-revue', routes.maRevue)
 
