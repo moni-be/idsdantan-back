@@ -1,4 +1,7 @@
 This is the checkpoint4 Project
+## Install
+Run `npm-install` to install the app's dependencies.
+Then copy `.env.sample` as `.env` and edit it as your configuration needs.
 
 ### `npm start`
 
