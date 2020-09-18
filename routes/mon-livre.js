@@ -8,8 +8,10 @@ router.get('/:id', (req, res) => {
     if (err) {
       console.log(err)
       res.status(500).send('Erreur de connection')
+    } else if (results === 0) {
+      res.status(404).send('C\'est produit n\'est plus disponible')
     } else {
-      res.json(results)
+      res.json(results[0])
     }
   })
 })
