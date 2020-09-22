@@ -14,6 +14,7 @@ app.use('/livre', routes.livre)
 app.use('/revue', routes.revue)
 app.use('/mon-livre', routes.monLivre)
 app.use('/ma-revue', routes.maRevue)
+app.use('/roman', routes.roman)
 
 app.listen(process.env.PORT, (err) => {
   if (err) {
