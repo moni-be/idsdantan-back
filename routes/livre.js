@@ -25,4 +25,28 @@ router.get('/conte', (req, res) => {
   })
 })
 
+router.get('/roman', (req, res) => {
+  connection.query('SELECT id,title, author, price, description,image_name, category_id FROM books WHERE category_id="2"', (err, results) => {
+    if (err) {
+      res.status(500).send('Erreur lors de la connexion')
+    } else if (results.length === 0) {
+      res.status(404).send('Nous n\'avons pas des romans !')
+    } else {
+      res.json(results)
+    }
+  })
+})
+
+router.get('/livre-reference', (req, res) => {
+  connection.query('SELECT id,title, author, price, description,image_name, category_id FROM books WHERE category_id="4"', (err, results) => {
+    if (err) {
+      res.status(500).send('Erreur lors de la connexion')
+    } else if (results.length === 0) {
+      res.status(404).send('Nous n\'avons pas ce genre !')
+    } else {
+      res.json(results)
+    }
+  })
+})
+
 module.exports = router
