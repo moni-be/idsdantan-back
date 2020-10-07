@@ -13,7 +13,7 @@ router.get('/', (req, res) => {
   })
 })
 
-router.get('/conte', (req, res) => {
+router.get('/:category_id/conte', (req, res) => {
   connection.query('SELECT id,title, author, price, description,image_name, category_id FROM books WHERE category_id="1"', (err, results) => {
     if (err) {
       res.status(500).send('Erreur lors de la connexion')
@@ -25,7 +25,7 @@ router.get('/conte', (req, res) => {
   })
 })
 
-router.get('/roman', (req, res) => {
+router.get('/:category_id/roman', (req, res) => {
   connection.query('SELECT id,title, author, price, description,image_name, category_id FROM books WHERE category_id="2"', (err, results) => {
     if (err) {
       res.status(500).send('Erreur lors de la connexion')
