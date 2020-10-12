@@ -4,9 +4,21 @@ const connection = require('../conf')
 const router = express.Router()
 
 router.get('/', (req, res) => {
-  connection.query('SELECT * FROM books INNER JOIN category ON books.category_id = category.id', (err, results) => {
+  connection.query('SELECT title, author, price, description,image_name FROM books', (err, results) => {
     if (err) {
       res.status(500).send('Erreur lors de la connection')
+    } else {
+      res.json(results)
+    }
+  })
+})
+
+router.get('/categorie/:id', (req, res) => {
+  connection.query('SELECT name FROM category WHERE id=?', [req.params.id], (err, results) => {
+    if (err) {
+      res.status(500).send('Erreur lors de la connexion')
+    } else if (results.length === 0) {
+      res.status(404).send('Nous n\'avons pas cette categorie!')
     } else {
       res.json(results)
     }
