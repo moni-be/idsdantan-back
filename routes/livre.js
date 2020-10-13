@@ -4,7 +4,7 @@ const connection = require('../conf')
 const router = express.Router()
 
 router.get('/', (req, res) => {
-  connection.query('SELECT title, author, price, description,image_name FROM books', (err, results) => {
+  connection.query('SELECT id, category_id,title, author, price, description,image_name FROM books', (err, results) => {
     if (err) {
       res.status(500).send('Erreur lors de la connection')
     } else {
@@ -14,7 +14,7 @@ router.get('/', (req, res) => {
 })
 
 router.get('/categorie/:id', (req, res) => {
-  connection.query('SELECT name FROM category WHERE id=?', [req.params.id], (err, results) => {
+  connection.query('SELECT name FROM category', [req.params.id], (err, results) => {
     if (err) {
       res.status(500).send('Erreur lors de la connexion')
     } else if (results.length === 0) {
