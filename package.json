@@ -13,9 +13,9 @@
     "mysql": "^2.18.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "^4.0.3",
+    "react-scripts": "^1.1.5",
     "trim-newlines": "^4.0.2",
-    "webpack-dev-server": "^2.11.5",
+    "webpack-dev-server": "^1.16.5",
     "yargs-parser": "^20.2.9"
   },
   "devDependencies": {
