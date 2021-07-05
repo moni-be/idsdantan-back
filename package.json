@@ -15,7 +15,7 @@
     "react-dom": "^16.13.1",
     "react-scripts": "^4.0.3",
     "trim-newlines": "^4.0.2",
-    "webpack-dev-server": "^2.11.3",
+    "webpack-dev-server": "^2.11.5",
     "yargs-parser": "^20.2.9"
   },
   "devDependencies": {
