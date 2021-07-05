@@ -4,12 +4,19 @@
   "description": "This is the checkpoint4 Project ## Install Run `npm-install` to install the app's dependencies. Then copy `.env.sample` as `.env` and edit it as your configuration needs.",
   "main": "index.js",
   "dependencies": {
+    "braces": "^3.0.2",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
+    "glob-parent": "^5.1.2",
+    "js-yaml": "^3.14.1",
+    "merge": "^1.2.1",
     "mysql": "^2.18.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "^4.0.3"
+    "react-scripts": "^1.1.5",
+    "trim-newlines": "^1.0.0",
+    "webpack-dev-server": "^2.11.3",
+    "yargs-parser": "^5.0.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.4"
